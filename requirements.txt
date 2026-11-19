@@ -1,0 +1,7 @@
+numpy
+pandas
+matplotlib
+openpyxl
+pytest
+jupyter
+# streamlit   # bỏ comment nếu làm dashboard
