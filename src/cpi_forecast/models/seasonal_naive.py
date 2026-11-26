@@ -1,12 +1,18 @@
-"""Seasonal Naive: lặp lại giá trị cùng kỳ năm trước."""
+"""Seasonal Naive: dự báo bằng giá trị cùng tháng của năm trước."""
 import numpy as np
 
 from .base import Forecaster
 
 
 class SeasonalNaiveForecaster(Forecaster):
-    def fit(self, y: np.ndarray) -> "SeasonalNaiveForecaster":
-        raise NotImplementedError
+    def __init__(self, period=12):
+        self.period = period
 
-    def predict(self, h: int) -> np.ndarray:
-        raise NotImplementedError
+    def fit(self, y):
+        y = np.asarray(y, dtype=float)
+        self.season_ = y[-self.period:]        # period phần tử cuối cùng của y
+        return self
+
+    def predict(self, h):
+        idx = np.arange(h) % self.period    # 0, 1, ..., 11, 0, 1, ... (quay vòng)
+        return self.season_[idx]

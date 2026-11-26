@@ -1,12 +1,17 @@
-"""Trung bình trượt."""
+"""Trung bình trượt: dự báo bằng trung bình k quan sát gần nhất."""
 import numpy as np
 
 from .base import Forecaster
 
 
 class MovingAverageForecaster(Forecaster):
-    def fit(self, y: np.ndarray) -> "MovingAverageForecaster":
-        raise NotImplementedError
+    def __init__(self, k=3):
+        self.k = k
 
-    def predict(self, h: int) -> np.ndarray:
-        raise NotImplementedError
+    def fit(self, y):
+        y = np.asarray(y, dtype=float)
+        self.mean_ = y[-self.k:].mean()          # trung bình của k phần tử cuối của y
+        return self
+
+    def predict(self, h):
+        return np.full(h, self.mean_)
