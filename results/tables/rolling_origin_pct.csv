@@ -1,0 +1,5 @@
+Mô hình,MAE h=1,MAPE h=1,MAE h=3,MAPE h=3,MAE h=6,MAPE h=6
+Naive,0.375,inf,0.526,inf,0.534,inf
+Seasonal Naive,0.517,inf,0.52,inf,0.493,inf
+Trung bình trượt (k=3),0.406,inf,0.451,inf,0.453,inf
+Hồi quy xu hướng (OLS),0.418,inf,0.424,inf,0.418,inf

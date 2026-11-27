@@ -1,0 +1,5 @@
+Mô hình,Trung bình sai số,Độ lệch chuẩn,ACF lag 1,ACF lag 12
+Naive,-0.009,0.515,-0.13,0.14
+Seasonal Naive,-0.033,0.734,0.56,-0.43
+Trung bình trượt (k=3),-0.015,0.548,0.31,0.13
+Hồi quy xu hướng (OLS),0.058,0.556,0.55,0.18

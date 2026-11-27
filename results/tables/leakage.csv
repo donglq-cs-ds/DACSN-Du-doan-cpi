@@ -1,0 +1,9 @@
+Chuỗi,Mô hình,MAE chuẩn hóa (đúng),MAE chuẩn hóa (rò rỉ),Tỉ lệ rò rỉ/đúng,MAE gốc (đúng),MAE gốc (rò rỉ)
+index,Naive,0.026,0.017,0.66,1.114,1.114
+index,Seasonal Naive,0.255,0.163,0.64,10.493,10.493
+index,Trung bình trượt (k=3),0.048,0.031,0.65,1.985,1.985
+index,Hồi quy xu hướng (OLS),0.283,0.215,0.76,13.791,13.791
+pct,Naive,0.452,0.522,1.15,0.375,0.375
+pct,Seasonal Naive,0.609,0.719,1.18,0.517,0.517
+pct,Trung bình trượt (k=3),0.486,0.565,1.16,0.406,0.406
+pct,Hồi quy xu hướng (OLS),0.494,0.581,1.18,0.418,0.418
